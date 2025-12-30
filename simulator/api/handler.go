@@ -74,6 +74,11 @@ func RegisterRoutes(r *mux.Router) {
 	r.HandleFunc("/api/v1/health", HealthCheckHandler).Methods("GET")
 	r.HandleFunc("/api/v1/patrons/bulk", CreateBulkPatronHandler).Methods("POST")
 	r.HandleFunc("/api/v1/dimdate/insertRange", InsertDimDateRange).Methods("POST")
+	r.HandleFunc("/api/v1/transactions", CreateFactTransactionHandler).Methods("POST")
+	r.HandleFunc("/api/v1/transaction-instruments", CreateFactTransactionInstrumentHandler).Methods("POST")
+	r.HandleFunc("/api/v1/transaction-instrument-denominations", CreateFactTransactionInstrumentDenominationHandler).Methods("POST")
+	r.HandleFunc("/api/v1/transaction-instrument-details", CreateFactTransactionInstrumentDetailHandler).Methods("POST")
+	r.HandleFunc("/api/v1/transaction-sessions", CreateFactTransactionSessionHandler).Methods("POST")
 }
 
 // HealthCheckHandler responds with a simple health status.
