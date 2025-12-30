@@ -1,0 +1,23 @@
+
+SELECT * FROM Patron LIMIT 10;
+
+
+
+SELECT * FROM dimdate
+
+    SELECT fulldate
+            FROM dimdate
+            ORDER BY fulldate DESC
+            LIMIT 1;
+
+SELECT DATE '2023-01-01' - DATE '2025-12-23' as days_difference;
+SELECT DATE '2025-12-23' - DATE '2025-12-01' AS days_difference;
+-- Result: 22
+TRUNCATE TABLE dimdate
+
+SELECT * FROM patron
+
+ALTER TABLE facttransaction DROP CONSTRAINT fkc_facttransaction_transactiondate;
+
+
+SELECT * FROM dimLocation LIMIT 10;
